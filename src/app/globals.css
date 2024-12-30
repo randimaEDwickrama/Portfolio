@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Serif';
+  src: url('/fonts/PPNeueWorld-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Sans';
+  src: url('/fonts/PPNeueMontreal-Regular.ttf') format('truetype');
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+p {
+  font-family: 'Sans', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Serif', serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
